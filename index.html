@@ -11,4 +11,25 @@
 	/>
 </div>
 </body>
+<script>
+let playing = false;
+let myAudio = new Audio();
+
+myAudio.src = 'theme.mp3';
+
+function Gameloop() {
+    myAudio.play();
+    if (myAudio.paused == true) {
+        myAudio.play();
+    }
+}
+
+document.querySelector("h1").addEventListener("click", (e) => {
+	if (myAudio.paused == true) {
+	    myAudio.play();
+	} else {
+		myAudio.pause();
+	}
+});
+</script>
 </html>
