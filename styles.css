@@ -1,4 +1,12 @@
-h1 {
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background: blueviolet;
 	color: pink;
+}
+
+
+img {
+	max-width: 1000px;
 }
