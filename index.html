@@ -8,6 +8,7 @@
 <img 
 	src="IMG_5335.JPG"
 	alt="Liam on a hill"
+	id="me"
 />
 <img 
 	src="underconstruction.gif"
@@ -33,6 +34,10 @@ document.querySelector("h1").addEventListener("click", (e) => {
 	} else {
 		myAudio.pause();
 	}
+});
+const me = document.querySelector("#me");
+me.addEventListener("click", (e) => {
+	me.classList.toggle("spinner");
 });
 </script>
 </html>
