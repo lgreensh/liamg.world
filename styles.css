@@ -6,6 +6,9 @@ body {
 	color: pink;
 }
 
+h1 {
+	cursor: pointer;
+}
 
 img {
 	max-width: 1000px;
