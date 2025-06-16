@@ -16,28 +16,22 @@
 />
 </body>
 <script>
-let playing = false;
 let myAudio = new Audio();
 
 myAudio.src = 'theme.mp3';
 
-function Gameloop() {
-    myAudio.play();
-    if (myAudio.paused == true) {
-        myAudio.play();
-    }
-}
-
-document.querySelector("h1").addEventListener("click", (e) => {
+const me = document.querySelector("#me");
+const header = document.querySelector("h1");
+const clickAction = (e) => {
+	me.classList.toggle("spinner");
+	header.classList.toggle("colour-changer");
 	if (myAudio.paused == true) {
 	    myAudio.play();
 	} else {
 		myAudio.pause();
 	}
-});
-const me = document.querySelector("#me");
-me.addEventListener("click", (e) => {
-	me.classList.toggle("spinner");
-});
+}
+header.addEventListener("click", clickAction);
+me.addEventListener("click", clickAction);
 </script>
 </html>
