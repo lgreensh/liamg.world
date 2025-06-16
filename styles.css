@@ -4,12 +4,28 @@ body {
 	align-items: center;
 	background: blueviolet;
 	color: pink;
+	gap: 10px;
 }
 
 h1 {
 	cursor: pointer;
+	  animation-name: change-color;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 
 img {
 	max-width: 1000px;
+}
+
+@keyframes change-color {
+  25% {
+    color: #00A4BD;
+  }
+  50% {
+    color: #FF7A59;
+  }
+  75% {
+    color: #00BDA5;
+  }
 }
